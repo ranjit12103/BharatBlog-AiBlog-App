@@ -1,5 +1,6 @@
 import keyword
 from multiprocessing import context
+import re
 from django.shortcuts import get_object_or_404, redirect, render
 
 from blogs.models import Blog, Category
@@ -54,6 +55,7 @@ def serach(request):
     return render(request, 'search.html', context)
 
 
+            
 
 
 
