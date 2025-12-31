@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
+
+import dashboards
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -13,5 +15,9 @@ urlpatterns = [
     path('blogs/search/', BlogView.serach, name='search'),
     path('register/', views.register, name='register'),
     path('login/', views.login, name="login"),
-    path('logout/', views.logout, name='logout')
+    path('logout/', views.logout, name='logout'),
+    
+    #dashboard
+    path('dashboard/', include('dashboards.urls')),
+    
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

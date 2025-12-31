@@ -20,6 +20,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.3.0/mdb.min.css" rel="stylesheet">
@@ -50,7 +51,7 @@
                 <a class="btn btn-sm btn-warning" href="{% url 'login' %}">Sign In</a>&nbsp;
                 <a class="btn btn-sm btn-outline-secondary" href="{% url 'register' %}">Register</a>
                 {% else %}
-                <span>You are loh=ggend in as {{ user }}</span>
+                <span><a href="{% url 'dashboard' %}">Dashboard</a></span>
                 &emsp;
                 <span><a href="{% url 'logout' %}">Logout</a></span>
                 {% endif %}
