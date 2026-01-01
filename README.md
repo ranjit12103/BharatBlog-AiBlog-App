@@ -8,7 +8,7 @@
 ## 📸 Screenshot
 
 
-![BharatBlog Preview](static/images/Macbook-Air-127.0.0.1.png)
+![BharatBlog Preview](Blog_main\static\images\Macbook-Air-127.0.0.1.png)
 
 ---
 
