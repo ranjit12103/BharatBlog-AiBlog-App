@@ -29,7 +29,7 @@
 <div class="row mb-2">
   {% for post in featured_posts %}
     {% if not forloop.first %}
-      <div class="col-md-6">
+      <div class="col-md-6 p-4">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 
           <!-- TEXT CONTENT -->
@@ -43,7 +43,7 @@
 
             <h3 class="mb-0">
               <a href="{% url 'blogs' post.slug %}" class="text-dark text-decoration-none">
-                {{ post.title }}
+                {{ post.title | truncatewords:7 }}
               </a>
             </h3>
 
@@ -52,7 +52,7 @@
             </div>
 
             <p class="card-text mb-auto">
-              {{ post.short_description|truncatewords:25 }}
+              {{ post.short_description|truncatewords:14 }}
             </p>
 
             <a href="{% url 'blogs' post.slug %}" class="stretched-link">
@@ -64,12 +64,16 @@
           <div class="col-auto d-none d-lg-block">
             {% if post.featured_image %}
               <img
-                src="{{ post.featured_image.url }}"
-                width="200"
-                height="248"
-                
-                style="object-fit: cover;"
-                alt="{{ post.title }}">
+                  src="{{ post.featured_image.url }}"
+                  width="200"
+                  height="240"
+                  style="
+                    object-fit: cover;
+                    margin: 5px 0;
+                    border: 2px solid #19191a;
+                    padding: 2px 2px;
+                  "
+                  alt="{{ post.title }}">
             {% endif %}
           </div>
 
