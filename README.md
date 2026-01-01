@@ -11,6 +11,11 @@
 |-----|--------|
 | 🖥️ BharatBlog Home | ![BharatBlog Preview](static/images/sc.png) |
 
+<<<<<<< HEAD
+=======
+![BharatBlog Preview](static/images/sc.png)
+
+>>>>>>> da52edcf28f97c12ad50f8c2680e75b1a7bd8ad2
 
 ---
 
